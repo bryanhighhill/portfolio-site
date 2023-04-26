@@ -1,38 +1,89 @@
 .App {
   text-align: center;
+  width: 100%;
+  background-color: rgb(255, 131, 89);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-div {
+  background-color: rgb(255, 131, 89);
+  color: #c6fff4;
+  background-color: rgb(255, 131, 89);
+  /* font-weight: bold;
+  font-size: 50px; */
+  min-width: 1290px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.footer-div {
+  background-color: rgb(4, 255, 222);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.name {
+  padding-top: 20px;
+  min-width: 900px;
 }
 
-.App-link {
-  color: #61dafb;
+.header-img {
+  width: 30%;
+  margin: auto;
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer-img {
+  width: 53%;
+  padding-left: 4%;
 }
+
+.bio {
+  width: 50%;
+  min-width: 1070px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 30px;
+  background-color: #c6fff4;
+  font-size: 15px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 5px black;
+}
+
+.bio-content {
+  font-size: 20px;
+  display: inline-block;
+  margin: 10px;
+}
+
+.hello {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.about-me {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 20px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-right: 15px;
+}
+
+.about-me:hover {
+  font-weight: bold;
+}
+
+.contact {
+  width: 25%;
+  min-width: 1070px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 30px;
+  background-color: #c6fff4;
+  font-size: 15px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 5px black;
+}
+
+/* .contact:hover {
+  font-weight: bold;
+} */
