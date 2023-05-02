@@ -132,7 +132,7 @@ function App() {
       <div className="nav-btns"> 
         <button className="about-me" onClick={() => setAboutMe(!aboutMe)}>{!aboutMe ? 'About Me' : <b>I'm Done Learning About You</b>}</button>
         <button className="about-me" onClick={() => setContact(!contact)}>{!contact ? 'Contact' : <b>I've Gotten Your Contact</b>}</button>
-        <button className="about-me" onClick={() => window.open('https://drive.google.com/file/d/1GjeUo86clg8FJu0vKE-aMFigQ--DmNg8/view?usp=share_link')}>Resume</button>
+        <button className="about-me" onClick={() => window.open('https://drive.google.com/file/d/1Y73wHY01RstWHTDNyal7k1OkeOcGG-6Y/view?usp=share_link')}>Resume</button>
       </div>
             {contact && 
               <div className="bio">

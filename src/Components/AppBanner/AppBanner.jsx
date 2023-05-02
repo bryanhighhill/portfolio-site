@@ -11,54 +11,63 @@ import './AppBanner.css';
 
 const AppBanner = () => {
     const [appIndex, setAppIndex] = useState(1);
+    const photos = [
+        bearCreekImage,
+        calcImage,
+        feedbackLoopImage,
+        movieSelectorImage,
+        photoGramImage,
+        shareitageImage,
+        toDoImage
+    ];
     
     const appData = [
         { 
             id: 1,
             name: 'Share-Itage',
-            img: shareitageImage,
+            img: photos[0],
             description: 'Share-Itage allows you and your loved ones to share and interact with your family recipes',
             github: 'https://github.com/bryanhighhill/Share-Itage-App'
         },
         { 
             id: 2,
             name: 'Bear Creek Lodge',
-            img: bearCreekImage,
+            img: photos[1],
             description: 'Bookkeeping app to help manage bookings at a rental property',
             github: 'https://bryanhighhill.com/software%20portfolio/PDFs/Bear_Creek_Lodge_documentation.pdf?'
         },
         { 
             id: 3,
             name: 'Feedback Loop',
-            img: feedbackLoopImage,
+            img: photos[2],
             description: 'App that allows students to rate their progress and submit feedback to instructors after weekly lessons',
             github: 'https://github.com/bryanhighhill/weekend-redux-feedback-loop'
         },
         { 
             id: 4,
             name: 'PhotoGram',
-            img: photoGramImage,
+            img: photos[3],
             description: 'Photo app that allows users to add their photos and interact with them',
             github: 'https://github.com/bryanhighhill/weekend-react-gallery'
         },
         { 
             id: 5,
             name: 'Movie Selector',
-            img: movieSelectorImage,
+            img: photos[4],
             description: 'App to keep track of your movie collection, the movie genres, and descriptions',
             github: 'https://github.com/bryanhighhill/weekend-movie-sagas'
         },
         { 
             id: 6,
             name: 'Server-Side Calculators',
-            img: calcImage,
+            img: photos[5],
             description: 'Server-side calculators',
             github: 'https://github.com/bryanhighhill/weekend-jquery-server-calculator'
         },
         { 
             id: 7,
             name: 'To-Do Task App',
-            img: toDoImage,
+            img: photos[6],
             description: 'App to keep track of your to-do list and the task status',
             github: 'https://github.com/bryanhighhill/weekend-sql-to-do-list'
         },
