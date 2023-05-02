@@ -16,116 +16,13 @@ function App() {
   const [greetingPosition, setGreetingPosition] = useState(0);
   const [headerHover, setHeaderHover] = useState(false);
   const [headerClicked, setHeaderClicked] = useState(false);
+  const images = [
+    header1,
+    header2,
+    footer1,
+    footer2
+  ];
   const randomNumber = Math.floor(Math.random() * 98);
-
-  useEffect(() => {
-      setTimeout(() => {
-          setGreetingPosition(randomNumber);
-      }, 2500);
-  }, [greetingPosition]);
-
-  const greetings = [
-    {greeting: 'Hello'},
-    {greeting: 'Hallo'},
-    {greeting: 'Përshëndetje'},
-    {greeting: 'Iwi selami newi'},
-    {greeting: 'Marhaba'},
-    {greeting: 'Barev'},
-    {greeting: 'Kamisaki'},
-    {greeting: 'Salam'},
-    {greeting: 'Kaixo'},
-    {greeting: 'Vitaju'},
-    {greeting: 'Hyālō'},
-    {greeting: 'Zdravo'},
-    {greeting: 'Zdraveĭte'},
-    {greeting: 'Haallo'},
-    {greeting: 'Nǐ hǎo'},
-    {greeting: 'Hola'},
-    {greeting: 'Kamusta'},
-    {greeting: 'Moni'},
-    {greeting: 'Bonghjornu'},
-    {greeting: 'Zdravo'},
-    {greeting: 'Ahoj'},
-    {greeting: 'Hej'},
-    {greeting: 'Hallo'}, 
-    {greeting: 'Tere'},
-    {greeting: 'Salām'},
-    {greeting: 'Bula'},
-    {greeting: 'Kumusta'},
-    {greeting: 'Hei'},
-    {greeting: 'Bonjour'},
-    {greeting: 'Dia dhuit'},
-    {greeting: 'Ola'},
-    {greeting: 'Gamarjoba'},
-    {greeting: 'Guten tag'},
-    {greeting: 'Geia'},
-    {greeting: "Mba'éichapa"},
-    {greeting: 'Bonjou'},
-    {greeting: 'Aloha'},
-    {greeting: 'Shalom'},
-    {greeting: 'Namaste'},
-    {greeting: 'Nyob zoo'},
-    {greeting: 'Szia'},
-    {greeting: 'Halló'},
-    {greeting: 'Ndewo'},
-    {greeting: 'Hello'},
-    {greeting: 'Halo'},
-    {greeting: 'Ciao'},
-    {greeting: 'Konichiwa'},
-    {greeting: 'Sälemetsiz be'},
-    {greeting: 'Suostei'},
-    {greeting: 'Mwaramutse'},
-    {greeting: 'Anyeong haseyo'},
-    {greeting: 'Slav'},
-    {greeting: 'Sabaidi'},
-    {greeting: 'Salve'},
-    {greeting: 'Sveika'},
-    {greeting: 'Sveiks'},
-    {greeting: 'Sveiki'},
-    {greeting: 'Moien'},
-    {greeting: 'Salama'},
-    {greeting: 'Selamat pagi'},
-    {greeting: 'Bongu'},
-    {greeting: 'Nǐ hǎo'},
-    {greeting: 'Kia ora'},
-    {greeting: 'Namaskāra'},
-    {greeting: 'Sain uu'},
-    {greeting: 'Niltze Tialli Pialli'},
-    {greeting: 'Ya’at’eeh'},
-    {greeting: 'Namaskāra'},
-    {greeting: 'Hei'},
-    {greeting: 'Salam'},
-    {greeting: 'Cześć'},
-    {greeting: 'Olá'},
-    {greeting: 'Sata srī akāla'},
-    {greeting: 'Akkam'},
-    {greeting: 'Allianchu'},
-    {greeting: 'Bunâ'},
-    {greeting: 'Privet'},
-    {greeting: 'Talofa'},
-    {greeting: 'Thobela'},
-    {greeting: 'Zdravo'},
-    {greeting: 'Dumela'},
-    {greeting: 'Ahoj'},
-    {greeting: 'Zdravo'},
-    {greeting: 'Jambo'},
-    {greeting: 'Hallå'},
-    {greeting: 'Kamusta'},
-    {greeting: 'Ia Orana'},
-    {greeting: 'Li-hó'},
-    {greeting: 'Vanakkam'},
-    {greeting: 'S̄wạs̄dī'},
-    {greeting: 'Tashi delek'},
-    {greeting: 'Mālō e lelei'},
-    {greeting: 'Avuxeni'},
-    {greeting: 'Merhaba'},
-    {greeting: 'Privit'},
-    {greeting: 'Assalāmu Alaykum'},
-    {greeting: 'Salom'},
-    {greeting: 'Xin chào'},
-    {greeting: 'Helo'},
-    {greeting: 'Molo'},
-];
 
   return (
     <div className="App">
@@ -173,16 +70,16 @@ function App() {
           className="header-img"
           src={nameHeader} 
           alt="bryan"
-          onMouseEnter={() => setHeaderHover(true)}
-          onMouseLeave={() => setHeaderHover(false)}
+          // onMouseEnter={() => setHeaderHover(true)}
+          // onMouseLeave={() => setHeaderHover(false)}
           onClick={() => setHeaderClicked(!headerClicked)}
         />
         <img 
           className="header-img"
-          src={footerHover ? header2 : header1} 
+          src={headerHover ? images[1] : images[0]} 
           alt="bryan"
-          onMouseEnter={() => setFooterHover(true)}
-          onMouseLeave={() => setFooterHover(false)}
+          onMouseEnter={() => setHeaderHover(true)}
+          onMouseLeave={() => setHeaderHover(false)}
           onClick={() => setHeaderClicked(!headerClicked)}
         />
       </section>
@@ -190,10 +87,10 @@ function App() {
       <section className="header-div">
           <img 
             className="footer-img"
-            src={headerHover ? footer2 : footer1} 
+            src={footerHover ? images[3] : images[2]} 
             alt="bryan"
-            onMouseEnter={() => setHeaderHover(true)}
-            onMouseLeave={() => setHeaderHover(false)}
+            onMouseEnter={() => setFooterHover(true)}
+            onMouseLeave={() => setFooterHover(false)}
         />
       </section>
     </div>
